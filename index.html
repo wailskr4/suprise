@@ -90,22 +90,14 @@
     80%{ transform:translateX(7px) rotate(3deg); }
   }
   
-  /* Breathing & Sleeping Head Tilt */
-  svg[data-mood="sleep"] .cat-body {
+  /* Breathing Animation for Guarding State */
+  svg[data-mood="curious"] .cat-body {
     animation: catBreathe 2.5s ease-in-out infinite;
     transform-origin: center 150px;
-  }
-  svg[data-mood="sleep"] .cat-head-group {
-    animation: catSleepHead 2.5s ease-in-out infinite;
-    transform-origin: 100px 88px;
   }
   @keyframes catBreathe {
     0%, 100% { transform: scaleY(1) scaleX(1); }
     50% { transform: scaleY(1.04) scaleX(1.02); }
-  }
-  @keyframes catSleepHead {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(1.5px) rotate(-1.5deg); }
   }
 
   /* Tail Swishing based on Moods */
@@ -151,16 +143,6 @@
   
   @keyframes earWiggleLeft { 0% { transform: rotate(-6deg); } 100% { transform: rotate(-14deg); } }
   @keyframes earWiggleRight { 0% { transform: rotate(6deg); } 100% { transform: rotate(14deg); } }
-
-  /* Zzz Floating Effect */
-  .zzz{ position:absolute; font-family:'Aref Ruqaa',serif; color:var(--lilac); font-size:1.4rem; opacity:0; animation:zzzFloat 3s ease-in infinite; text-shadow: 0 0 5px rgba(201,169,255,0.5); pointer-events:none; }
-  .zzz.z2{ animation-delay:.9s; right:-10px; }
-  .zzz.z3{ animation-delay:1.8s; right:-25px; }
-  @keyframes zzzFloat{
-    0%{ opacity:0; transform:translateY(10px) scale(.6); }
-    20%{ opacity:.85; }
-    100%{ opacity:0; transform:translateY(-50px) scale(1.3); }
-  }
 
   /* ---------- BUTTONS ---------- */
   .btn{
@@ -254,7 +236,7 @@
 <div id="hearts-layer" aria-hidden="true"></div>
 
 <template id="cat-template">
-  <svg viewBox="0 0 200 200" width="100%" data-mood="sleep" aria-hidden="true">
+  <svg viewBox="0 0 200 200" width="100%" data-mood="curious" aria-hidden="true">
     <path class="cat-tail" d="M105,150 Q195,140 185,110 Q178,90 158,95" fill="none" stroke="#B7A8E0" stroke-width="10" stroke-linecap="round"/>
     <ellipse class="cat-body" cx="100" cy="150" rx="55" ry="38" fill="#EFE3D0"/>
     <ellipse cx="72" cy="182" rx="14" ry="9" fill="#FDF6EC"/>
@@ -303,9 +285,6 @@
 <section id="scene-gate" class="scene active">
   <div class="relative">
     <div id="cat-gate" class="cat-wrap"></div>
-    <div id="sleep-indicators">
-      <span class="zzz">z</span><span class="zzz z2">z</span><span class="zzz z3">z</span>
-    </div>
   </div>
 
   <h1 class="font-display text-3xl md:text-4xl mt-6" style="color:var(--gold)">🐾 This kitty is guarding somethin 🤔</h1>
@@ -393,7 +372,7 @@ function mountCat(hostId, mood){
   svg.setAttribute('data-mood', mood);
   return svg;
 }
-const catGateSvg = mountCat('cat-gate','sleep');
+const catGateSvg = mountCat('cat-gate','curious');
 const catQuestionSvg = mountCat('cat-question','curious');
 const catNoSvg = mountCat('cat-no','sad');
 const catCelebrateSvg = mountCat('cat-celebrate', 'happy');
@@ -442,21 +421,18 @@ function setupGate(){
   const locked = document.getElementById('gate-locked');
   const open = document.getElementById('gate-open');
   const catWrap = document.getElementById('cat-gate');
-  const zzzIndicators = document.getElementById('sleep-indicators');
   
   if(isBirthdayWindow()){
     locked.classList.add('hidden');
     open.classList.remove('hidden');
-    catGateSvg.setAttribute('data-mood','awake');
+    catGateSvg.setAttribute('data-mood','happy');
     catWrap.classList.add('bounce');
-    if(zzzIndicators) zzzIndicators.style.display = 'none';
     if(countdownInterval) clearInterval(countdownInterval);
   } else {
     locked.classList.remove('hidden');
     open.classList.add('hidden');
-    catGateSvg.setAttribute('data-mood','sleep');
+    catGateSvg.setAttribute('data-mood','curious');
     catWrap.classList.remove('bounce');
-    if(zzzIndicators) zzzIndicators.style.display = 'block';
     renderCountdown();
     countdownInterval = setInterval(renderCountdown, 1000);
   }
