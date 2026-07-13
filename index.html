@@ -320,6 +320,22 @@
   <button id="btn-back" class="btn btn-outline mt-8">↩ عودة للحراسة</button>
 </section>
 
+<!-- NEW POPUP SCENE -->
+<section id="scene-popup" class="scene">
+  <div class="letter-card font-display" dir="ltr" style="text-align: center; max-width: 480px;">
+    <div class="seal" style="margin-bottom: 1.5rem; animation: sealPulse 2s infinite ease-in-out;">✨</div>
+    <h2 class="text-2xl md:text-3xl mb-4" style="color:var(--gold)">Wait, before one last thing...</h2>
+    <p class="text-lg md:text-xl leading-relaxed mb-8" style="font-family:'Tajawal',sans-serif; color:var(--cream);">
+      This is <strong style="color:var(--rose)">Part 1/2</strong>.<br>
+      With this you will first receive the part 1 of the gift.<br><br>
+      Later my dear you will receive the part 2: <strong style="color:var(--lilac)">a phone call</strong>.<br>
+      Answer it, that's the key to the full gift as I planned! 📞
+    </p>
+    <button id="btn-continue" class="btn btn-gold">🎁 Go to Part 1</button>
+  </div>
+</section>
+<!-- END NEW POPUP SCENE -->
+
 <section id="scene-yes" class="scene">
   <div id="cat-celebrate" class="cat-wrap celebrate mb-4" style="width: 120px;"></div>
   
@@ -327,11 +343,11 @@
     <div class="seal">🐾</div>
     <h2 class="text-3xl md:text-4xl text-center mb-2" style="color:var(--gold)">عيد ميلاد سعيد يا نجلاء 🎂</h2>
     <p class="text-center text-base mb-8" style="color:var(--lilac); font-family:'Tajawal',sans-serif;">26th of july / le 26 juillet / 26 جويلية🎈</p>
-    <div class="letter-body text-lg md:text-xl" style="font-family:'DynaPuff',sans-serif; color:var(--cream);">
-      <p style="font-family:'Tajawal',sans-serif;">عزيزتي نجلاء، و صديقتي الطيبة 🎂</p>
-      <p>Happy birthday to my dear friend in my life! Today is your day—the day you were born to light up the lives of everyone around you with your genuine care and kind heart and to also be part of my story that i hope will know no end 🧡</p>
-      <p>💖When i think about it while writting isnt this a funny yet beautiful coincidance ? meeting you on my birthday i started to think maybe she is the best gift i got for my birthday who know and by the same way am writing you this birthday present🧡</p>
-      <p>I hope sincerly we will have many birthday's to celebrate many laughs that we will share together many stories many adventures i hope if we ended as married to give you the beautiful life like your eyes and if not then wail is a golden Memory for you whenever you remember my smile you cant help but smile .😁</p>
+        <div class="letter-body text-lg md:text-xl" style="font-family:'DynaPuff',sans-serif; color:var(--cream);">
+      <p style="font-family:'Tajawal',sans-serif;">  نجلاء صديقتي الطيبة و من اجمل صدف 2026 🎂</p>
+      <p>Happy birthday to my dear friend ! Today is your day—the day you were born to light up the lives of everyone around you with your genuine care and kind heart and to also be part of my story that i hope will continue for the longest time 🧡</p>
+      <p>💖When i think about it while writting isnt this a funny yet beautiful coincidance ? meeting you little days before my birthday i started to think maybe she is the best gift i got for my birthday a new year with a new great person in it,Just know am happy having u and writing this 🧡</p>
+      <p>I hope sincerly we will have many birthday's to celebrate many laughs that we will share together many stories many adventures i hope to be one of the best pillar in your life and if faith was truly me and you i would be happy knowing you are my partner but if the road seperates i want that wail is a golden Memory for you whenever you remember you smile cause i was someone truly worthy .😁</p>
       <p>I wish you a year filled with joy, success, and dreams coming true one by one. I hope you always remain exactly as you are: Kind, Spontaneous, and Unique. and close to me and everyone who loves you</p>
       <p class="font-bold text-xl mt-6" style="color:var(--rose)">Happy birthday to the most beautiful gift i received this Year 💖 happy birthday 🎉</p>
       <p class="text-base opacity-80 mt-6" style="font-family:'Tajawal',sans-serif;">With all my love, the friend who will always love you #wail 🐾</p>
@@ -365,6 +381,7 @@
 const catTpl = document.getElementById('cat-template');
 function mountCat(hostId, mood){
   const host = document.getElementById(hostId);
+  if (!host) return null; // Added quick check for safety if empty div is used
   const clone = catTpl.content.cloneNode(true);
   host.innerHTML='';
   host.appendChild(clone);
@@ -449,7 +466,13 @@ document.getElementById('btn-discover').addEventListener('click', ()=>{
   showScene('scene-question');
 });
 
+// Changed to show the popup box first instead of going straight to the final scene
 document.getElementById('btn-yes').addEventListener('click', ()=>{
+  showScene('scene-popup');
+});
+
+// The new continue button that proceeds to the final gift message
+document.getElementById('btn-continue').addEventListener('click', ()=>{
   showScene('scene-yes');
   startCelebration();
 });
