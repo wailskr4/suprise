@@ -287,7 +287,7 @@
     <div id="cat-gate" class="cat-wrap"></div>
   </div>
 
-  <h1 class="font-display text-3xl md:text-4xl mt-6" style="color:var(--gold)">🐾 This kitty is guarding somethin 🤔</h1>
+  <h1 class="font-display text-3xl md:text-4xl mt-6" style="color:var(--gold)" id="head-title">🐾 This kitty is guarding somethin 🤔</h1>
 
   <div id="gate-locked">
     <p class="mt-4 max-w-md mx-auto text-base md:text-lg opacity-90 leading-relaxed">
@@ -298,7 +298,7 @@
   </div>
 
   <div id="gate-open" class="hidden">
-    <p class="mt-4 max-w-md mx-auto text-lg md:text-xl font-medium">اليوم هو اليوم المنتظر... القطة أخيراً تسمح لك بدخول 🎉</p>
+    <p class="mt-4 max-w-md mx-auto text-lg md:text-xl font-medium">اليوم هو اليوم المنتظر... القطة أخيراً استيقظت 🎉</p>
     <button id="btn-discover" class="btn btn-gold mt-6">💌 اكتشفي الرسالة</button>
   </div>
 </section>
@@ -343,11 +343,11 @@
     <div class="seal">🐾</div>
     <h2 class="text-3xl md:text-4xl text-center mb-2" style="color:var(--gold)">عيد ميلاد سعيد يا نجلاء 🎂</h2>
     <p class="text-center text-base mb-8" style="color:var(--lilac); font-family:'Tajawal',sans-serif;">26th of july / le 26 juillet / 26 جويلية🎈</p>
-        <div class="letter-body text-lg md:text-xl" style="font-family:'DynaPuff',sans-serif; color:var(--cream);">
-      <p style="font-family:'Tajawal',sans-serif;">  نجلاء صديقتي الطيبة و من اجمل صدف 2026 🎂</p>
-      <p>Happy birthday to my dear friend ! Today is your day—the day you were born to light up the lives of everyone around you with your genuine care and kind heart and to also be part of my story that i hope will continue for the longest time 🧡</p>
-      <p>💖When i think about it while writting isnt this a funny yet beautiful coincidance ? meeting you little days before my birthday i started to think maybe she is the best gift i got for my birthday a new year with a new great person in it,Just know am happy having u and writing this 🧡</p>
-      <p>I hope sincerly we will have many birthday's to celebrate many laughs that we will share together many stories many adventures i hope to be one of the best pillar in your life and if faith was truly me and you i would be happy knowing you are my partner but if the road seperates i want that wail is a golden Memory for you whenever you remember you smile cause i was someone truly worthy .😁</p>
+    <div class="letter-body text-lg md:text-xl" style="font-family:'DynaPuff',sans-serif; color:var(--cream);">
+      <p style="font-family:'Tajawal',sans-serif;">عزيزتي نجلاء، و صديقتي الطيبة 🎂</p>
+      <p>Happy birthday to my dear friend in my life! Today is your day—the day you were born to light up the lives of everyone around you with your genuine care and kind heart and to also be part of my story that i hope will know no end 🧡</p>
+      <p>💖When i think about it while writting isnt this a funny yet beautiful coincidance ? meeting you on my birthday i started to think maybe she is the best gift i got for my birthday who know and by the same way am writing you this birthday present🧡</p>
+      <p>I hope sincerly we will have many birthday's to celebrate many laughs that we will share together many stories many adventures i hope if we ended as married to give you the beautiful life like your eyes and if not then wail is a golden Memory for you whenever you remember my smile you cant help but smile .😁</p>
       <p>I wish you a year filled with joy, success, and dreams coming true one by one. I hope you always remain exactly as you are: Kind, Spontaneous, and Unique. and close to me and everyone who loves you</p>
       <p class="font-bold text-xl mt-6" style="color:var(--rose)">Happy birthday to the most beautiful gift i received this Year 💖 happy birthday 🎉</p>
       <p class="text-base opacity-80 mt-6" style="font-family:'Tajawal',sans-serif;">With all my love, the friend who will always love you #wail 🐾</p>
@@ -438,8 +438,9 @@ function setupGate(){
   const locked = document.getElementById('gate-locked');
   const open = document.getElementById('gate-open');
   const catWrap = document.getElementById('cat-gate');
-  
+  const headtitle = document.getElementById('head-title');
   if(isBirthdayWindow()){
+    headtitle.textContent =" 🥳 The wait is over 😄";
     locked.classList.add('hidden');
     open.classList.remove('hidden');
     catGateSvg.setAttribute('data-mood','happy');
