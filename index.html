@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<title>عيد ميلاد نجلاء 🎂</title>
+<title>عيد ميلاد رانيا 🎂</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -11,13 +11,14 @@
 <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg-deep:#140A2E;
-    --bg-mid:#241143;
-    --bg-mid2:#33184f;
-    --gold:#F4C95D;
-    --rose:#FF6F91;
-    --lilac:#C9A9FF;
-    --cream:#FDF6EC;
+    /* Nouveau Thème Rose */
+    --bg-deep:#4a0e2e;
+    --bg-mid:#701a45;
+    --bg-mid2:#9e2a5e;
+    --gold:#ffb3c6;   
+    --rose:#ff4d85;   
+    --lilac:#ffccd5;  
+    --cream:#fff0f5;  
   }
   *{box-sizing:border-box;}
   html,body{
@@ -35,7 +36,7 @@
     position:absolute; background:var(--cream); border-radius:50%;
     animation: twinkle linear infinite;
     opacity:.2;
-    box-shadow: 0 0 8px rgba(253, 246, 236, 0.4);
+    box-shadow: 0 0 8px rgba(255, 240, 245, 0.4);
   }
   @keyframes twinkle{
     0%,100%{ opacity:.15; transform: scale(1); }
@@ -155,24 +156,24 @@
   .btn:hover{ transform:translateY(-3px) scale(1.05); }
   .btn:active{ transform:translateY(1px) scale(0.98); }
   .btn:focus-visible{ outline:3px solid var(--lilac); outline-offset:3px; }
-  .btn-gold{ background:linear-gradient(135deg,var(--gold),#e8a93f); color:#2a1a05; box-shadow:0 8px 25px rgba(244,201,93,.4); }
-  .btn-rose{ background:linear-gradient(135deg,var(--rose),#e14d70); color:#2a0512; box-shadow:0 8px 25px rgba(255,111,145,.4); }
-  .btn-outline{ background:rgba(253,246,236,.05); color:var(--cream); border:2px solid rgba(253,246,236,.35); backdrop-filter: blur(5px); }
-  .btn-outline:hover{ border-color:var(--cream); background:rgba(253,246,236,.1); }
+  .btn-gold{ background:linear-gradient(135deg,var(--gold),#ff8fa3); color:#4a0e2e; box-shadow:0 8px 25px rgba(255,179,198,.4); }
+  .btn-rose{ background:linear-gradient(135deg,var(--rose),#d81e5b); color:#fff; box-shadow:0 8px 25px rgba(255,77,133,.4); }
+  .btn-outline{ background:rgba(255,240,245,.05); color:var(--cream); border:2px solid rgba(255,240,245,.35); backdrop-filter: blur(5px); }
+  .btn-outline:hover{ border-color:var(--cream); background:rgba(255,240,245,.1); }
 
   /* ---------- COUNTDOWN ---------- */
   .countdown-box{
     display:flex; gap:1rem; justify-content:center; margin-top:1.8rem; flex-wrap:wrap;
   }
   .cd-unit{
-    background:rgba(253,246,236,.03); 
-    border:1px solid rgba(253,246,236,.15);
+    background:rgba(255,240,245,.03); 
+    border:1px solid rgba(255,240,245,.15);
     border-radius:1rem; padding:.8rem 1.2rem; min-width:80px; 
     backdrop-filter:blur(8px);
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
   }
-  .cd-unit:hover { transform: translateY(-3px); border-color: rgba(244,201,93,.4); }
+  .cd-unit:hover { transform: translateY(-3px); border-color: rgba(255,179,198,.4); }
   .cd-num{ font-size:1.8rem; font-weight:900; color:var(--gold); font-family:'Tajawal',sans-serif; text-shadow: 0 2px 5px rgba(0,0,0,0.3); }
   .cd-label{ font-size:.8rem; opacity:.8; margin-top:.3rem; font-weight: 500; }
 
@@ -181,7 +182,7 @@
   .heart{
     position:fixed; bottom:-10%; z-index:6; pointer-events:none;
     font-size:1.6rem; opacity:.9; animation:heartRise linear forwards;
-    filter: drop-shadow(0 0 10px rgba(255,111,145,0.4));
+    filter: drop-shadow(0 0 10px rgba(255,77,133,0.4));
   }
   @keyframes heartRise{
     0%{ transform:translateY(0) translateX(0) rotate(0deg) scale(0.5); opacity:0; }
@@ -192,12 +193,12 @@
   .letter-card{
     position:relative; z-index:20;
     max-width:640px; width:92%;
-    background:linear-gradient(180deg, rgba(36,17,67,.85), rgba(20,10,46,.95));
+    background:linear-gradient(180deg, rgba(112,26,69,.85), rgba(74,14,46,.95));
     backdrop-filter: blur(12px);
-    border:1px solid rgba(244,201,93,.4);
+    border:1px solid rgba(255,179,198,.4);
     border-radius:1.5rem;
     padding:2.5rem 2rem 2rem;
-    box-shadow:0 30px 70px rgba(0,0,0,.6), 0 0 20px rgba(244,201,93,0.1) inset;
+    box-shadow:0 30px 70px rgba(0,0,0,.6), 0 0 20px rgba(255,179,198,0.1) inset;
     animation:letterIn 1.2s cubic-bezier(.2,.8,.2,1);
     max-height:85vh; overflow-y:auto;
   }
@@ -208,7 +209,7 @@
   .letter-body p{ margin-bottom:1.2rem; line-height: 1.8; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
   .seal{
     width:64px; height:64px; border-radius:50%;
-    background:radial-gradient(circle at 35% 30%, #ffdf8c, var(--gold) 60%, #b7862c);
+    background:radial-gradient(circle at 35% 30%, #fff0f5, var(--gold) 60%, #ff8fa3);
     display:flex; align-items:center; justify-content:center;
     margin:0 auto 1.2rem; box-shadow:0 8px 20px rgba(0,0,0,.5);
     font-size:1.6rem;
@@ -216,13 +217,13 @@
   }
   @keyframes sealPulse {
     0%, 100% { transform: scale(1); box-shadow:0 8px 20px rgba(0,0,0,.5); }
-    50% { transform: scale(1.05); box-shadow:0 8px 30px rgba(244,201,93,.4); }
+    50% { transform: scale(1.05); box-shadow:0 8px 30px rgba(255,179,198,.4); }
   }
 
   ::-webkit-scrollbar{ width:6px; }
   ::-webkit-scrollbar-track{ background: rgba(0,0,0,0.1); }
-  ::-webkit-scrollbar-thumb{ background:rgba(244,201,93,.5); border-radius:10px; }
-  ::-webkit-scrollbar-thumb:hover{ background:rgba(244,201,93,.8); }
+  ::-webkit-scrollbar-thumb{ background:rgba(255,179,198,.5); border-radius:10px; }
+  ::-webkit-scrollbar-thumb:hover{ background:rgba(255,179,198,.8); }
 
   @media (prefers-reduced-motion: reduce){
     *{ animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important; }
@@ -291,8 +292,8 @@
 
   <div id="gate-locked">
     <p class="mt-4 max-w-md mx-auto text-base md:text-lg opacity-90 leading-relaxed">
-      هذه القطة راهي تعسلك نجلاء في مفاجئة و لن  تفتح الباب إلا في يوم واحد من السنة...<br>
-      ارجعي يوم <span class="font-bold text-xl" style="color:var(--rose)">٢٦ يوليو</span> لتكتشفي المفاجأة 💌
+      هذه القطة راهي تعسلك رانيا في مفاجئة و لن تفتح الباب إلا في يوم واحد من السنة...<br>
+      ارجعي يوم <span class="font-bold text-xl" style="color:var(--rose)">١٣ أغسطس</span> لتكتشفي المفاجأة 💌
     </p>
     <div class="countdown-box" id="countdown"></div>
   </div>
@@ -306,7 +307,7 @@
 <section id="scene-question" class="scene">
   <div id="cat-question" class="cat-wrap tilt"></div>
   <h2 class="font-display text-3xl md:text-4xl mt-6" style="color:var(--lilac)">🐱 سؤال صغير قبل الدخول...</h2>
-  <p class="mt-3 text-lg md:text-xl">هل أنتِ <span class="font-bold text-2xl" style="color:var(--rose)">نجلاء نصيرة صديقته لعزيزة ؟</span></p>
+  <p class="mt-3 text-lg md:text-xl">هل أنتِ <span class="font-bold text-2xl" style="color:var(--rose)">رانيا صديقته لعزيزة ؟</span></p>
   <div class="flex gap-4 mt-8">
     <button id="btn-yes" class="btn btn-gold">✅ نعم، أنا</button>
     <button id="btn-no" class="btn btn-outline">❌ لا</button>
@@ -316,38 +317,24 @@
 <section id="scene-no" class="scene">
   <div id="cat-no" class="cat-wrap"></div>
   <h2 class="font-display text-2xl md:text-4xl mt-6" style="color:var(--rose)">هذه المفاجأة ليست لكم 🐾</h2>
-  <p class="mt-3 max-w-sm mx-auto opacity-90 text-lg leading-relaxed">هذا السرّ الصغير خاص بـ <span class="font-bold" style="color:var(--gold)">نجلاء</span> وحدها... شكرًا لفضولكم اللطيف! 💫</p>
+  <p class="mt-3 max-w-sm mx-auto opacity-90 text-lg leading-relaxed">هذا السرّ الصغير خاص بـ <span class="font-bold" style="color:var(--gold)">رانيا</span> وحدها... شكرًا لفضولكم اللطيف! 💫</p>
   <button id="btn-back" class="btn btn-outline mt-8">↩ عودة للحراسة</button>
 </section>
 
-<!-- NEW POPUP SCENE -->
-<section id="scene-popup" class="scene">
-  <div class="letter-card font-display" dir="ltr" style="text-align: center; max-width: 480px;">
-    <div class="seal" style="margin-bottom: 1.5rem; animation: sealPulse 2s infinite ease-in-out;">✨</div>
-    <h2 class="text-2xl md:text-3xl mb-4" style="color:var(--gold)">Wait, before one last thing...</h2>
-    <p class="text-lg md:text-xl leading-relaxed mb-8" style="font-family:'Tajawal',sans-serif; color:var(--cream);">
-      This is <strong style="color:var(--rose)">Part 1/2</strong>.<br>
-      With this you will first receive the part 1 of the gift.<br><br>
-      Later my dear inch'allah today or tomorrow at best you will receive the part 2: <strong style="color:var(--lilac)">a phone call</strong>.<br>
-      Answer it, that's the key to the full gift as I planned! 📞
-    </p>
-    <button id="btn-continue" class="btn btn-gold">🎁 Go to Part 1</button>
-  </div>
-</section>
-<!-- END NEW POPUP SCENE -->
 
 <section id="scene-yes" class="scene">
   <div id="cat-celebrate" class="cat-wrap celebrate mb-4" style="width: 120px;"></div>
   
   <div class="letter-card font-display" dir="rtl">
     <div class="seal">🐾</div>
-    <h2 class="text-3xl md:text-4xl text-center mb-2" style="color:var(--gold)">عيد ميلاد سعيد يا نجلاء 🎂</h2>
-    <p class="text-center text-base mb-8" style="color:var(--lilac); font-family:'Tajawal',sans-serif;">26th of july / le 26 juillet / 26 جويلية🎈</p>
+    <h2 class="text-3xl md:text-4xl text-center mb-2" style="color:var(--gold)">عيد ميلاد سعيد يا رانيا 🎂</h2>
+    <p class="text-center text-base mb-8" style="color:var(--lilac); font-family:'Tajawal',sans-serif;">13th of august / le 13 août / 13 أوت🎈</p>
            <div class="letter-body text-lg md:text-xl" style="font-family:'DynaPuff',sans-serif; color:var(--cream);">
-      <p style="font-family:'Tajawal',sans-serif;">  نجلاء صديقتي الطيبة و من اجمل صدف 2026 🎂</p>
+      <p style="font-family:'Tajawal',sans-serif;"> رانيا صديقتي الطيبة و من اجمل صدف 2026 🎂</p>
       <p>Happy birthday to my dear friend ! Today is your day—the day you were born to light up the lives of everyone around you with your genuine care and kind heart and to also be part of my story that i hope will continue for the longest time 🧡</p>
-      <p>💖When i think about it while writting isnt this a funny yet beautiful coincidance ? meeting you little days before my birthday i started to think maybe she is the best gift i got for my birthday a new year with a new great person in it,Just know am happy having u and writing this 🧡</p>
+      <p>💖 When i think about it while writting isnt this a funny yet beautiful coincidance ? i saw an account the girl seemed really the kind and respectful one, then decide to write how that she caught my attention then had the will to ask to be beside her and now she is one of my fav people and inchallah something i would be happy to be always with 🧡</p>
       <p>I hope sincerly we will have many birthday's to celebrate many laughs that we will share together many stories many adventures i hope to be one of the best pillar in your life and if faith was truly me and you i would be happy knowing you are my partner. But if the road seperates i want that wail is a golden Memory for you whenever you remember you smile cause i was someone truly worthy .😁</p>
+      <span class="text-base italic opacity-50" > with love 💖 made by ur friend wail skr
     <div class="text-center mt-8">
       <button id="btn-replay" class="btn btn-outline">🔁 إعادة المفاجأة</button>
     </div>
@@ -392,19 +379,19 @@ const catCelebrateSvg = mountCat('cat-celebrate', 'happy');
 
 /* ============ DATE LOGIC ============ */
 function isBirthdayWindow(d = new Date()){
-  // الاحتفال بين 26 و 29 يوليو 
-  return d.getMonth() === 6 && d.getDate() >= 26 && d.getDate() <= 29;
+  // الاحتفال بين 13 و 15 أغسطس 
+  return d.getMonth() === 7 && d.getDate() >= 13 && d.getDate() <= 15;
 }
 
-function nextJuly26(d = new Date()){
+function nextAugust13(d = new Date()){
   const todayMid = new Date(d.getFullYear(), d.getMonth(), d.getDate());
-  let target = new Date(d.getFullYear(), 6, 26);
-  if (todayMid > target && !isBirthdayWindow(d)) target = new Date(d.getFullYear()+1, 6, 26);
+  let target = new Date(d.getFullYear(), 7, 13);
+  if (todayMid > target && !isBirthdayWindow(d)) target = new Date(d.getFullYear()+1, 7, 13);
   return target;
 }
 
 function renderCountdown(){
-  const target = nextJuly26();
+  const target = nextAugust13();
   const now = new Date();
   let diff = Math.max(0, target - now);
   
@@ -465,14 +452,10 @@ document.getElementById('btn-discover').addEventListener('click', ()=>{
 
 // Changed to show the popup box first instead of going straight to the final scene
 document.getElementById('btn-yes').addEventListener('click', ()=>{
-  showScene('scene-popup');
+  showScene('scene-yes');
 });
 
-// The new continue button that proceeds to the final gift message
-document.getElementById('btn-continue').addEventListener('click', ()=>{
-  showScene('scene-yes');
-  startCelebration();
-});
+
 
 document.getElementById('btn-no').addEventListener('click', ()=>{
   document.getElementById('cat-question').classList.add('shake');
@@ -506,7 +489,7 @@ function resizeCanvas(){
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 
-const fwColors = ['#F4C95D','#FF6F91','#C9A9FF','#FDF6EC','#7FE0C2'];
+const fwColors = ['#ffb3c6','#ff4d85','#ffccd5','#fff0f5','#ff8fa3'];
 
 function spawnFirework(){
   const x = Math.random()*canvas.width;
